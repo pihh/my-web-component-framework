@@ -1,0 +1,20 @@
+{
+  "name": "js-fw",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.23.7",
+    "@babel/plugin-transform-class-properties": "^7.23.3",
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.33",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.8",
+    "vite-plugin-babel": "^1.2.0"
+  }
+}

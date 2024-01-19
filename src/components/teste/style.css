@@ -1,0 +1,10 @@
+fw-example{
+    color: blue;
+}
+
+fw-example .example-component{
+    padding: 1em;
+    border-radius: 1em;
+    border: 1px solid blue;
+    margin: 1em auto;
+}

@@ -1,0 +1,14 @@
+.example-component{
+    
+    background: white;
+    border-radius: 1em;
+    margin:0 auto;
+    margin-top: 4em;
+    margin-bottom: 4em;
+
+}
+
+input{
+    background: url(https://tailwindui.com/img/beams-basic-transparent.png);
+    background-size: cover;
+}

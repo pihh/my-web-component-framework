@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background: url(https://tailwindui.com/img/beams-basic-transparent.png);
+  background-size: cover;
+}
+p{
+  @apply mt-4 text-base leading-7 text-slate-600  
+}
+.title h1{
+  @apply mt-4 text-3xl font-extrabold tracking-[-0.04em] text-black sm:text-5xl sm:leading-[3.5rem]
+}
+.title .subtitle{
+  @apply text-base font-semibold leading-7 text-indigo-600 mt-0
+}
+.subtitle {
+  @apply  text-indigo-600
+}
+.heading {
+  @apply mb-8 mt-4;
+}
+.heading.small {
+  @apply mb-4 mt-4;
+}
+.heading h2, .heading h3{
+  @apply  font-semibold leading-6 text-black
+}
+.heading .subtitle {
+  @apply  text-indigo-600
+}
+.heading p {
+  @apply mt-0 text-sm leading-6 text-slate-700
+}
+.showcase-list{
+  @apply divide-y divide-gray-100 bg-white ring-slate-900/10 ring-1 px-4 rounded-lg
+}
+
+.showcase-list li{
+  @apply flex justify-between gap-x-2 pb-4
+}
+.showcase-list li > div{
+  @apply flex min-w-0 
+}
+.showcase-list li .showcase-list--header{
+  @apply flex min-w-0 gap-x-4
+}
+.showcase-list--header--title{
+  @apply text-sm font-semibold leading-4 text-gray-900
+}
+.showcase-list--header--subtitle{
+  @apply mt-1 truncate text-xs  text-gray-500
+}
+.showcase-list--header--result{
+  @apply  shrink-0 sm:flex sm:items-end
+}
+.showcase-list--header--result > p{
+  @apply  text-sm leading-6 text-gray-900
+}
+
+.page-content{
+  @apply relative z-20 mx-auto max-w-[40rem] pb-16 pt-16 px-16 lg:mx-0 lg:w-[40rem] lg:max-w-none lg:flex-none lg:pb-24 lg:pr-4 lg:pt-20
+}
+
+button{
+  @apply inline-flex justify-center rounded-lg text-sm font-semibold py-2.5 px-4 bg-slate-900 text-white hover:bg-slate-700 ml-2
+}
+@media (min-width: 640px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}

@@ -1,0 +1,27 @@
+<div class="teste-component">
+    <h1>teste Component</h1>
+    <p>Test and showcase file</p>
+    
+    <h4>Data binding</h4>
+    <p>Data binding should be data down, actions up. With this in mind:</p>
+    
+    <h5>Data</h5>
+    <ul>
+        <li>
+            <b>Key: Parent key</b> ${this.parentKey}
+        </li>
+        <li>
+            <b>Key: Own key</b> ${this.ownKey}
+        </li>
+        <li>
+            <b>Both keys in same string:</b> ok: ${this.ownKey}  pk: ${this.parentKey}  PK ${this.parentKey} 
+        </li>
+
+        <li>
+            <b>Adding a function call :</b> ${this.size}  -> ${this.size+1}
+        </li>
+    </ul>
+
+    <h5>Actions</h5>
+    <button (click)="${this.onClickButton()}"></button>
+</div>

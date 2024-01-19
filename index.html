@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <title>Vite App</title>
+  </head>
+  <body
+    class="font-sans antialiased text-gray-600 min-h-full flex flex-col [overflow-anchor:none]"
+  >
+    <div >
+      <main class="flex gap-4 justify-center">
+        <section>
+          <fw-example size="1" input="Update this!!">
+            <div slot="title" class="heading small">
+              <h2 class="subtitle">Title Slot</h2>
+              <p>Slot content displaying the heading styles</p>
+            </div>
+            <div slot class="heading small">
+              <h2 class="subtitle">Generic Slot</h2>
+              <p>Default slot</p>
+            </div>
+          </fw-example>
+        </section>
+        <section>
+          <fw-example size="10000"> </fw-example>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="/main.js"></script>
+    <div class="flex bg-red-600"></div>
+  </body>
+</html>

@@ -1,0 +1,127 @@
+<div class="example-component page-content shadow">
+  <header class="title">
+    <h1>Example Component</h1>
+    <p class="subtitle">Test and showcase file</p>
+    <small>${this.input}</small>
+  </header>
+  <main class="">
+    <section class="example-databinding">
+      <header class="heading">
+        <h2>Data binding;</h2>
+        <p>Data binding should be data down, actions up. With this in mind:</p>
+        <fw-data data="${this.parentKey}"></fw-data>
+      </header>
+      <article>
+        <header class="heading small">
+          <h3>Showcase</h3>
+        </header>
+        <ul role="list" class="showcase-list">
+          <fw-showcase-item
+            title="Data binding"
+            description=" Bind parentKey to the template"
+          >
+            <div slot>
+              <p>${this.parentKey}</p>
+            </div>
+          </fw-showcase-item>
+          <fw-showcase-item
+            title="Counter"
+            description="The counter is updated via callback function and renders with
+            logic"
+          >
+            <div slot>
+              <p>${this.size} -> ${this.size+1}</p>
+            </div>
+          </fw-showcase-item>
+          <fw-showcase-item
+            title="Input"
+            description="Two way databinding with a input"
+          >
+            <div slot>
+              <input
+              class="mt-2 flex items-center justify-between rounded-md bg-white px-3 py-2 shadow-sm ring-1 ring-slate-700/10"
+                keyup="${this.onInputKeyUp($event)}"
+              />
+              <p class="text-right">${this.input}</p>
+            </div>
+          </fw-showcase-item>
+        </ul>
+      </article>
+    </section>
+    <article>
+      <header class="heading small">
+        <h3>Actions</h3>
+      </header>
+      <ul role="list" class="showcase-list">
+        <fw-showcase-item
+          title="Listen to events"
+          description="On click will do something probably at the console"
+        >
+          <div slot>
+            <div class="flex flex-col gap-2 py-2">
+              <button click="${this.onClickButton()}">Update counter</button>
+              <button
+                click="${this.onClickButtonWithEventPlusData($event,'xxx')}"
+              >
+                Log event and arg
+              </button>
+            </div>
+          </div>
+        </fw-showcase-item>
+        <fw-showcase-item
+          title="Listen other then click"
+          description="Click DoubleClick MouseEnter MouseLeave"
+        >
+          <div slot>
+            <div class="flex flex-col gap-2">
+              <div class="flex justify-end">
+                <button click="${this.onClickAlert()}">Click</button>
+                <button dblclick="${this.onDbClickAlert()}">
+                  Double Click
+                </button>
+              </div>
+              <div class="flex justify-end">
+                <button mouseenter="${this.onMouseEnterAlert()}">
+                  Mouse enter
+                </button>
+                <button mouseleave="${this.onMouseLeaveAlert()}">
+                  Mouse leave
+                </button>
+              </div>
+            </div>
+          </div>
+        </fw-showcase-item>
+        <fw-showcase-item
+          title="Run function"
+          description="Update the parameter 'key' on the databing section"
+        >
+          <div slot>
+            <button click="${this.onClickButtonWithLogic()}">
+              Update parameter
+            </button>
+          </div>
+        </fw-showcase-item>
+        <fw-showcase-item
+          title="Inside slot"
+          description="Do the same but inside a slot"
+        >
+          <div slot>
+            <button click="${this.onClickButtonWithLogic()}">
+              Update from a inside a slot
+            </button>
+          </div>
+        </fw-showcase-item>
+      </ul>
+    </article>
+
+    <article>
+      <header class="heading">
+        <h3>Slots</h3>
+      </header>
+      <div>
+        <slot name="title"></slot>
+        <slot></slot>
+      </div>
+    </article>
+  </main>
+</div>
